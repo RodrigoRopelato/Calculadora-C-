@@ -1,0 +1,125 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Projeto_Calculadora
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            string opcao = "";
+            bool continuar = true;
+            double resultado=0;
+            double numero1=0;
+            double numero2=0;
+
+          
+            do
+            {
+                Menu();
+
+                Console.Write("\nOpção: ");
+                opcao = Console.ReadLine();
+                
+                if (opcao != "5" )
+                {
+                    Console.Write("\nDigite o primeiro numero: ");
+                    numero1 = double.Parse(Console.ReadLine());
+                    Console.Write("Digite o segundo numero: ");
+                    numero2 = double.Parse(Console.ReadLine());
+                }
+
+                switch (opcao)
+                {
+                    case "1":
+                        resultado = somar(numero1, numero2);
+                        break;                           
+                    case "2":
+                         resultado = subtrair(numero1,numero2);
+                        break;
+                    case "3":
+                          resultado = multiplicar(numero1,numero2);
+                        break;
+                    case "4":
+                          resultado=dividir(numero1,numero2);
+                        break;
+                    case "5":
+                        continuar = false;
+                        break;
+                    default:
+                        OpcaoInvalida();
+                        break;
+                }
+                Console.ReadKey();
+                Console.Clear();
+
+            } while (continuar);
+
+        }
+
+      
+
+        private static void Menu()
+        {
+            Console.WriteLine("Calculadora \n");
+            Console.WriteLine("Escolha uma operação a ser executada");
+            Console.WriteLine("1-Somar");
+            Console.WriteLine("2-Subtrair");
+            Console.WriteLine("3-Multiplicar");
+            Console.WriteLine("4-Dividir");
+            Console.WriteLine("5-Sair do sistema");
+        }
+
+        private static void OpcaoInvalida()
+        {
+            Console.WriteLine("\nOpção Invalida!");
+            Console.WriteLine("Escolha uma das opções do menu.");
+        }
+
+        private static double dividir(double num1, double num2)
+        {
+           
+            Console.Clear();
+            Console.WriteLine("Operação de divisão selecionada \n");
+            double resultado = num1 / num2;
+            Console.WriteLine("\n{0} / {1} = {2}", num1, num2, resultado);
+            return resultado;
+        }
+
+        public static double multiplicar(double num1, double num2)
+        {
+            
+            Console.Clear();
+            Console.WriteLine("Operação de multiplicação selecionada \n");
+            double resultado = num1 * num2;
+            Console.WriteLine("\n{0} x {1} = {2}", num1, num2, resultado);
+            return resultado;
+        }
+
+        private static double subtrair(double num1, double num2)
+        {
+            Console.Clear();
+            Console.WriteLine("Operação de Subtração selecionada \n");
+            double resultado = num1 - num2;
+            Console.WriteLine("\n{0} - {1} = {2}", num1, num2, resultado);
+            return resultado;
+        }
+
+        private static double somar(double num1, double num2)
+        {
+            Console.Clear();
+            Console.WriteLine("Operação de Soma selecionada\n");
+            double resultado = num1 + num2;
+            Console.WriteLine("\n{0} + {1} = {2}", num1, num2, resultado);
+            return resultado;
+        }
+    }
+}
+

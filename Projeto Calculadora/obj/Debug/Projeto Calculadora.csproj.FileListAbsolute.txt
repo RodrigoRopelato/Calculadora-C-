@@ -1,0 +1,7 @@
+C:\Users\rodri\source\repos\Projeto Calculadora\Projeto Calculadora\bin\Debug\Projeto Calculadora.exe.config
+C:\Users\rodri\source\repos\Projeto Calculadora\Projeto Calculadora\bin\Debug\Projeto Calculadora.exe
+C:\Users\rodri\source\repos\Projeto Calculadora\Projeto Calculadora\bin\Debug\Projeto Calculadora.pdb
+C:\Users\rodri\source\repos\Projeto Calculadora\Projeto Calculadora\obj\Debug\Projeto Calculadora.csprojAssemblyReference.cache
+C:\Users\rodri\source\repos\Projeto Calculadora\Projeto Calculadora\obj\Debug\Projeto Calculadora.csproj.CoreCompileInputs.cache
+C:\Users\rodri\source\repos\Projeto Calculadora\Projeto Calculadora\obj\Debug\Projeto Calculadora.exe
+C:\Users\rodri\source\repos\Projeto Calculadora\Projeto Calculadora\obj\Debug\Projeto Calculadora.pdb
